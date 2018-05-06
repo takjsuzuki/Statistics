@@ -6,8 +6,6 @@ import matplotlib.animation as animation
 from matplotlib.animation import ArtistAnimation
 
 
-
-
 class Histogram:
 
     def __init__(self,NumStage):
@@ -27,8 +25,8 @@ def ShowHistogram(count,NumStage,ax):
     ax.set_ylabel('freq')
     x = np.linspace(-NumStage/2,NumStage/2,NumStage+1)
     x = np.linspace(-0.5,0.5,NumStage+1)
-    print(x)
-    print(count)
+    #print(x)
+    #print(count)
     ax.plot(x,count*2)
             
 
@@ -95,7 +93,7 @@ if __name__=="__main__":
     fig = plt.figure()
     plt.subplots_adjust(left=-0.3, bottom=0.1, right=1.3, top=0.9, wspace=0, hspace=0)
 
-    print(count)
+    #print(count)
 
 
     def plot(i,count,Nframes):
@@ -114,7 +112,8 @@ if __name__=="__main__":
 
         ini = int(NumObj/Nframes*i)
         fin = int(NumObj/Nframes*(i+1))
-        print(ini,fin)
+        #print(ini,fin)
+        print("{0} / {1} calculated".format(i,Nframes))
 
         obj = Object(NumStage,count)
         for i in range(NumStage):
